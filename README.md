@@ -16,7 +16,7 @@ You will learn to:
 
 
 
-#References
+References
 
 https://s3-us-west-2.amazonaws.com/qiime2-workshops/fmt-cdiff/index.html#fmt-for-recurrent-clostridium-difficile-infection-tutorial
 https://isugenomics.github.io/bioinformatics-workbook/dataAnalysis/Metagenomics/Qiime2.html
