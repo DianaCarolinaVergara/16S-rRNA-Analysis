@@ -1,0 +1,23 @@
+### Decompress .tar
+
+tar -xvf file.tar
+tar -xvf 1_25080_1-A01_1-A01-Muricata-M-muricata_C83KD_1490.tar
+
+___
+
+### Import Data 
+Import in this case data with the format Paired-end Sequences with quality (CasavaOneEightSingleLanePerSampleDirFmt)
+     > Transform .fastq.gz to .qza
+
+qiime tools import \
+  --type 'SampleData[PairedEndSequencesWithQuality]' \
+  --input-path lane1 \
+  --input-format CasavaOneEightSingleLanePerSampleDirFmt \
+  --output-path demux-paired-end.qza
+
+
+### Demultiplex
+
+qiime demux summarize \
+  --i-data demux-paired-end.qza \
+  --o-visualization demux.qzv
