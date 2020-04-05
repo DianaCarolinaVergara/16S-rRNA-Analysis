@@ -1,0 +1,106 @@
+#SampleID	center_name	instrument_model	library_construction_protocol	platform	run_center	target_gene	target_subfragment	genus	species	reads	codigo	Depto	Locality	collection_date	prof	zooxanthellae
+S85	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	M.purpurea	33923	542	Choco	Roca Liliana	jul-17	18-25m	AZ
+S86	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Heterogorgia	out	41758	568	Choco	Ensenada de Utria	jul-17	4-13m	AZ
+S87	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Pacifigorgia	out	42557	576	Choco	Ensenada de Utria	jul-17	4-13m	AZ
+S88	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Heterogorgia	out	35648	593	Choco	Ensenada de Utria	jul-17	4-13m	AZ
+S89	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Heterogorgia	out	41503	602	Choco	Ensenada de Utria	jul-17	4-13m	AZ
+S90	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	M.purpurea	34326	623	Choco	Piedra de Fidel	jul-17	9-15m	AZ
+S91	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	M.crassa	44232	624	Choco	Piedra de Fidel	jul-17	9-15m	AZ
+S92	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	sp	31328	626	Choco	Piedra de Fidel	jul-17	9-15m	AZ
+S93	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	M.fruticosa	33085	628	Choco	Piedra de Fidel	jul-17	9-15m	AZ
+S94	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	M.fruticosa	37728	631	Choco	Piedra de Fidel	jul-17	9-15m	AZ
+S95	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	sp	41426	633	Choco	Piedra de Fidel	jul-17	9-15m	AZ
+S96	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	StLouis	16S rRNA	V4	Muricea	M.fruticosa	49323	652	Choco	Piedra de Fidel	jul-17	9-15m	AZ
+ECU022-M-hebes	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.hebes	98383	ECU022-M-hebes	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU043-M-austera	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.austera	94946	ECU043-M-austera	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU069-M-plantag	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.plantaginea	87194	ECU069-M-plantag	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU035-M-californica	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.californica	85851	ECU035-M-californica	Ecuador	El-Pelado	oct-18	15-20m	Z
+CA2-M-elongata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.elongata	81673	CA2-M-elongata	Cartagena	Montanita	sep-17	17m	Z
+ECU016-M-purpurea	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.purpurea	81577	ECU016-M-purpurea	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU076-Muricea-sp	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	sp	81213	ECU076-Muricea-sp	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU072-M-californica	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.californica	81178	ECU072-M-californica	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU019-M-austera	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.austera	80499	ECU019-M-austera	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU050-M-californica	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.californica	80408	ECU050-M-californica	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU045-M-austera	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.austera	76941	ECU045-M-austera	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU080-M-echinata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.echinata	76397	ECU080-M-echinata	Ecuador	El-Pelado	oct-18	15-20m	AZ
+SAI1701	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Eunicea	E.knighty	75842	SAI1701	SAI	WestView	feb-19	3-5m	Z
+ECU089-Muricea-sp	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	sp	75507	ECU089-Muricea-sp	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU065-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	75004	ECU065-M-fruticosa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU007-M-purpurea	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.purpurea	74655	ECU007-M-purpurea	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU010-M-plantag	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.plantaginea	74190	ECU010-M-plantag	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU034-M-austera	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.austera	73462	ECU034-M-austera	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU005-M-californica	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.californica	72236	ECU005-M-californica	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU116-M-crassa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.crassa	70616	ECU116-M-crassa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+MLP143-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	70311	MLP143-M-fruticosa	Malpelo	Tiburonera	mar-18	20-25m	AZ
+ECU118-M-crassa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.crassa	69679	ECU118-M-crassa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU041-M-squarro	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.squarrosa	69615	ECU041-M-squarro	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU083-M-echinata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.echinata	69262	ECU083-M-echinata	Ecuador	El-Pelado	oct-18	15-20m	AZ
+MLP150-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	69221	MLP150-M-fruticosa	Malpelo	Tiburonera	mar-18	20-25m	AZ
+MLP147-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	68763	MLP147-M-fruticosa	Malpelo	Tiburonera	mar-18	20-25m	AZ
+ECU015-M-plantag	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.plantaginea	68050	ECU015-M-plantag	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU111-M-californica	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.californica	66576	ECU111-M-californica	Ecuador	El-Pelado	oct-18	15-20m	AZ
+SAI1833-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	66249	SAI1833-M-muricata	SAI	WestView	feb-19	3-5m	Z
+ECU048-M-squarro	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.squarrosa	65913	ECU048-M-squarro	Ecuador	El-Pelado	oct-18	15-20m	AZ
+M105-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	65545	M105-M-muricata	SAI	WestView	feb-19	3-5m	Z
+ECU079-M-echinata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.echinata	65498	ECU079-M-echinata	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU044-M-squarro	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.squarrosa	65066	ECU044-M-squarro	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU004-M-plantag	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.plantaginea	64968	ECU004-M-plantag	Ecuador	El-Pelado	oct-18	15-20m	AZ
+SAI1832-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	64902	SAI1832-M-muricata	SAI	WestView	feb-19	3-5m	Z
+ECU082-Muricea-sp	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	sp	64553	ECU082-Muricea-sp	Ecuador	El-Pelado	oct-18	15-20m	AZ
+CA6-M-laxa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.laxa	63935	CA6-M-laxa	Cartagena	Montanita	sep-17	35m	Z
+SAI1835-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	62396	SAI1835-M-muricata	SAI	WestView	feb-19	3-5m	Z
+CA1-M-elonagata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.elongata	61967	CA1-M-elonagata	Cartagena	Montanita	sep-17	17m	Z
+ECU018-M-purpurea	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.purpurea	61915	ECU018-M-purpurea	Ecuador	El-Pelado	oct-18	15-20m	AZ
+F2-Pacifico	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Seawater	Pacifico	60894	F2-Pacifico	Ecuador	El-Pelado	oct-18	15-20m	SW
+SAI1728-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	60118	SAI1728-M-muricata	SAI	WestView	feb-19	3-5m	Z
+F3P-Caribe	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Seawater	Caribe_deep	59910	F3P-Caribe	SAI	WestView	feb-19	3-5m	SW
+SAI1702	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Eunicea	E.asperula	59515	SAI1702	SAI	WestView	feb-19	3-5m	Z
+ECU031-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	58998	ECU031-M-fruticosa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+CA4-M-laxa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.laxa	58542	CA4-M-laxa	Cartagena	Montanita	sep-17	35m	Z
+G1-M-elongata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.elongata	57670	G1-M-elongata	SAI	WestView	feb-19	3-5m	Z
+SAI1836-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	57562	SAI1836-M-muricata	SAI	WestView	feb-19	3-5m	Z
+MLP144-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	57089	MLP144-M-fruticosa	Malpelo	Tiburonera	mar-18	20-25m	AZ
+902-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	56476	902-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	117m	AZ
+ECU021-M-purpurea	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.purpurea	56376	ECU021-M-purpurea	Ecuador	El-Pelado	oct-18	15-20m	AZ
+F1-Pacifico	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Seawater	Pacifico	55718	F1-Pacifico	Ecuador	El-Pelado	oct-18	15-20m	SW
+ECU117-M-crassa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.crassa	55159	ECU117-M-crassa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+CA3-M-laxa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.laxa	54697	CA3-M-laxa	Cartagena	Montanita	sep-17	35m	Z
+SAI1712-M-laxa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.laxa	53183	SAI1712-M-laxa	SAI	WestView	feb-19	40-42m	Z
+ECU001-M-plantag	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.plantaginea	52829	ECU001-M-plantag	Ecuador	El-Pelado	oct-18	15-20m	AZ
+F1S-Caribe	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Seawater	Caribe_deep	52073	F1S-Caribe	SAI	WestView	feb-19	3-5m	SW
+ECU026-M-austera	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.austera	51474	ECU026-M-austera	Ecuador	El-Pelado	oct-18	15-20m	AZ
+MLP146-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	51000	MLP146-M-fruticosa	Malpelo	Tiburonera	mar-18	20-25m	AZ
+ECU025-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	49221	ECU025-M-fruticosa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+F2P-Caribe	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Seawater	Caribe_shallow	48811	F2P-Caribe	SAI	WestView	feb-19	3-5m	SW
+ECU046-M-squarro	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.squarrosa	48465	ECU046-M-squarro	Ecuador	El-Pelado	oct-18	15-20m	AZ
+G5-M-elongata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.elongata	48412	G5-M-elongata	SAI	WestView	feb-19	3-5m	Z
+ECU070-M-squarro	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.squarrosa	47181	ECU070-M-squarro	Ecuador	El-Pelado	oct-18	15-20m	AZ
+CA5-M-laxa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.laxa	45791	CA5-M-laxa	Cartagena	Montanita	sep-17	35m	Z
+ECU124-M-hebes	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.hebes	45566	ECU124-M-hebes	Ecuador	El-Pelado	oct-18	15-20m	AZ
+G6-M-elongata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.elongata	45307	G6-M-elongata	SAI	WestView	feb-19	3-5m	Z
+857-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	43897	857-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	98m	AZ
+MLP154-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	43265	MLP154-M-fruticosa	Malpelo	Tiburonera	mar-18	20-25m	AZ
+ECU119-M-crassa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.crassa	42806	ECU119-M-crassa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU049-M-californica	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.californica	40819	ECU049-M-californica	Ecuador	El-Pelado	oct-18	15-20m	AZ
+854-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	39690	854-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	97m	AZ
+SAI1729-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	37899	SAI1729-M-muricata	SAI	WestView	feb-19	3-5m	Z
+ECU030-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	37497	ECU030-M-fruticosa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+ECU108-M-robusta	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.robusta	35905	ECU108-M-robusta	Ecuador	El-Pelado	oct-18	15-20m	AZ
+850-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	35685	850-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	96m	AZ
+ECU109-M-robusta	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.robusta	33496	ECU109-M-robusta	Ecuador	El-Pelado	oct-18	15-20m	AZ
+752-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	31699	752-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	53m	AZ
+ECU056-M-fruticosa	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.fruticosa	31699	ECU056-M-fruticosa	Ecuador	El-Pelado	oct-18	15-20m	AZ
+799-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	31298	799-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	79m	AZ
+731-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	31237	731-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	53m	AZ
+852-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	28456	852-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	97m	AZ
+SAI1831-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	28427	SAI1831-M-muricata	SAI	WestView	feb-19	3-5m	Z
+856-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	26930	856-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	98m	AZ
+SAI1727-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	24394	SAI1727-M-muricata	SAI	WestView	feb-19	3-5m	Z
+ECU085-M-echinata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.echinata	19479	ECU085-M-echinata	Ecuador	El-Pelado	oct-18	15-20m	AZ
+736-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	19473	736-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	54m	AZ
+801-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	18554	801-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	78m	AZ
+722-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	18480	722-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	58m	AZ
+732-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	16399	732-M-pendula	Golfo-Mexico	Golfo-Mexico	sep-18	53m	AZ
+Muricata-M-muricata	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.muricata	16209	Muricata-M-muricata	SAI	WestView	feb-19	3-5m	Z
+803-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	12646	803-M-pendula	Golfo-Mexico	Golfo-Mexico	feb-19	78m	AZ
+802-M-pendula	IOWA	Illumina MiSeq	Illumina V4 515, 806bc	Illumina	IOWA	16S rRNA	V4	Muricea	M.pendula	11933	802-M-pendula	Golfo-Mexico	Golfo-Mexico	feb-19	78m	AZ
