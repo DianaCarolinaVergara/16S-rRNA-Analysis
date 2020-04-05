@@ -21,3 +21,490 @@ qiime tools import \
 qiime demux summarize \
   --i-data demux-paired-end.qza \
   --o-visualization demux.qzv
+
+#Quality filter - DADA2
+
+qiime dada2 denoise-single \
+  --i-demultiplexed-seqs demux-paired-end.qza \
+  --p-trim-left 0 \
+  --p-trunc-len 150 \
+  --o-representative-sequences rep-seqs-dada2.qza \
+  --o-table table-dada2.qza \
+  --o-denoising-stats stats-dada2.qza
+
+
+##O USAR ESTE! CON EUNICEA ESTE SI SIRVE
+qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux.qza \
+  --p-trim-left-f 13 \
+  --p-trim-left-r 13 \
+  --p-trunc-len-f 150 \
+  --p-trunc-len-r 150 \
+  --o-table table.qza \
+  --o-representative-sequences rep-seqs.qza \
+  --o-denoising-stats denoising-stats.qza
+
+---
+#Features table construction (OTUs TABLE)
+
+qiime feature-table summarize \
+  --i-table table-dada2.qza \
+  --m-sample-metadata-file sample_metadata.txt \
+  --o-visualization full-table.qzv
+qiime feature-table tabulate-seqs \
+  --i-data rep-seqs-dada2.qza \
+  --o-visualization rep-seqs.qzv
+
+qiime fragment-insertion sepp \
+  --i-representative-sequences rep-seqs-dada2.qza \
+  --p-threads 4 \
+  --o-tree insertion-tree.qza \
+  --o-placements insertion-placements.qza
+
+ 
+qiime feature-table summarize \
+  --i-table table-dada2.qza \
+  --m-sample-metadata-file sample_metadata.txt \
+  --o-visualization table.qzv
+qiime feature-table summarize \
+  --i-table table-dada2.qza \
+  --m-sample-metadata-file sample_metadata.txt \
+  --o-visualization removed-table.qzv
+
+#Alpha rarefaction plotting
+
+qiime diversity alpha-rarefaction \
+  --i-table table-dada2.qza \
+  --i-phylogeny insertion-tree.qza \
+  --p-max-depth 65000 \
+  --m-metadata-file sample_metadata.txt \
+  --o-visualization alpha-rarefaction.qzv
+
+qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny insertion-tree.qza \
+  --i-table table-dada2.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-sampling-depth 15000 \
+  --output-dir core-metrics-results
+
+
+#Alpha-Beta diversity Analysis
+
+https://forum.qiime2.org/t/alpha-and-beta-diversity-explanations-and-commands/2282
+#Non-phylogenetic ALFA metrics
+
+qiime diversity alpha \
+  --i-table table-dada2.qza \
+  --p-metric observed_otus \
+  --o-alpha-diversity observed_otus_vector.qza
+
+#cambiar --p-metric para chao1, simpson, shannon, margalef index
+
+qiime diversity alpha-group-significance \
+  --i-alpha-diversity core-metrics-results/faith_pd_vector.qza \
+  --m-metadata-file sample_metadata.txt \
+  --o-visualization core-metrics-results/faith-pd-group-significance.qzv
+
+qiime diversity alpha-group-significance \
+  --i-alpha-diversity core-metrics-results/evenness_vector.qza \
+  --m-metadata-file sample_metadata.txt \
+  --o-visualization core-metrics-results/evenness-group-significance.qzv
+
+-
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix core-metrics-results/bray_curtis_distance_matrix.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column species \
+    --o-visualization core-metrics-results/bray_curtis-species-significance.qzv
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix core-metrics-results/bray_curtis_distance_matrix.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column zooxanthellae \
+    --o-visualization core-metrics-results/bray_curtis-zooxanthellae-significance.qzv
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix core-metrics-results/bray_curtis_distance_matrix.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column Depto \
+    --o-visualization core-metrics-results/bray_curtis-depto-significance.qzv
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix core-metrics-results/bray_curtis_distance_matrix.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column prof \
+    --o-visualization core-metrics-results/bray_curtis-prof-significance.qzv
+
+
+#################
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column Depto \
+  --p-pairwise \
+  --o-visualization core-metrics-results/unweighted-unifrac-Depto-significance.qzv
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column zooxanthellae \
+  --p-pairwise \
+  --o-visualization core-metrics-results/unweighted-unifrac-zooxanthellae-significance.qzv
+
+---
+
+qiime emperor plot \
+  --i-pcoa core-metrics-results/unweighted_unifrac_pcoa_results.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-custom-axes species \
+  --o-visualization core-metrics-results/unweighted-unifrac-emperor-species.qzv
+
+qiime emperor plot \
+  --i-pcoa core-metrics-results/bray_curtis_pcoa_results.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-custom-axes species \
+  --o-visualization core-metrics-results/bray-curtis-emperor-species.qzv
+
+qiime emperor plot \
+  --i-pcoa core-metrics-results/bray_curtis_pcoa_results.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-custom-axes zooxanthellae \
+  --o-visualization core-metrics-results/bray-curtis-emperor-zooxanthellae.qzv
+
+qiime emperor plot \
+  --i-pcoa core-metrics-results/bray_curtis_pcoa_results.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-custom-axes Depto \
+  --o-visualization core-metrics-results/bray-curtis-emperor-depto.qzv
+
+qiime emperor plot \
+  --i-pcoa core-metrics-results/bray_curtis_pcoa_results.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-custom-axes prof \
+  --o-visualization core-metrics-results/bray-curtis-emperor-prof.qzv
+
+---
+#Taxonomic classification
+
+wget \
+  -O "gg-13-8-99-515-806-nb-classifier.qza" \
+  "https://data.qiime2.org/2018.11/common/gg-13-8-99-515-806-nb-classifier.qza"
+
+
+qiime feature-classifier classify-sklearn \
+  --i-classifier gg-13-8-99-515-806-nb-classifier.qza \
+  --i-reads rep-seqs-dada2.qza \
+  --o-classification taxonomy.qza
+
+#MEJOR***
+#Use SILVA132 	database
+qiime feature-classifier classify-sklearn \
+  --i-classifier silva-132-99-515-806-nb-classifier.qza \
+  --i-reads rep-seqs-dada2.qza \
+  --o-classification taxonomySILVA.qza
+
+
+qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy.qzv
+
+___
+
+qiime taxa barplot \
+  --i-table table-dada2.qza \
+  --i-taxonomy taxonomy.qza \
+  --m-metadata-file sample_metadata.txt \
+  --o-visualization taxa-bar-plots.qzv
+
+--
+
+#Differential abundance analysis
+
+#TODO
+qiime gneiss correlation-clustering \
+  --i-table table-dada2.qza \
+  --o-clustering hierarchy.qza
+
+qiime gneiss gradient-clustering \
+  --i-table table-dada2.qza \
+  --m-gradient-file sample_metadata.txt \
+  --m-gradient-column species \
+  --o-clustering gradient-hierarchy.qza
+
+
+qiime gneiss dendrogram-heatmap \
+  --i-table table-dada2.qza \
+  --i-tree hierarchy.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column zooxanthellae \
+  --p-color-map seismic \
+  --o-visualization heatmap.qzv
+
+qiime gneiss dendrogram-heatmap \
+--i-table table-dada2.qza \ 
+--i-tree hierarchy.qza \
+--m-metadata-file sample_metadata.txt \
+--m-metadata-column zooxanthellae \
+--p-color-map seismic \
+--o-visualization tree_heatmap_by_zoox.qzv
+
+
+#Differential Abundance - ANCOM
+https://chmi-sops.github.io/mydoc_qiime2.html
+#STEP 10
+
+qiime feature-table filter-samples \
+  --i-table table-dada2.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-where "zooxanthellae='AZ'" \
+  --o-filtered-table azoox-table.qza
+
+qiime feature-table filter-samples \
+  --i-table table-dada2.qza \
+  --m-metadata-file sample_metadata.txt \
+  --p-where "zooxanthellae='Z'" \
+  --o-filtered-table zoox-table.qza
+
+qiime composition add-pseudocount \
+  --i-table zoox-table.qza \
+  --o-composition-table comp-zoox-table.qza
+
+qiime composition add-pseudocount \
+  --i-table azoox-table.qza \
+  --o-composition-table comp-azoox-table.qza
+
+qiime composition ancom \
+  --i-table comp-zoox-table.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column SampleID \
+  --o-visualization ancom-Species.qzv
+
+qiime composition ancom \
+  --i-table comp-azoox-table.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column species \
+  --o-visualization ancom-Species.qzv
+
+
+#Filtered for PHYLA
+
+qiime taxa collapse \
+--i-table table-dada2.qza \
+--i-taxonomy taxonomy.qza \
+--p-level 2 \
+--o-collapsed-table collapsed-phylum-table.qza
+
+qiime gneiss correlation-clustering \
+  --i-table collapsed-phylum-table.qza \
+  --o-clustering hierarchy_phylum.qza
+
+qiime gneiss gradient-clustering \
+  --i-table collapsed-phylum-table.qza \
+  --m-gradient-file sample_metadata.txt \
+  --m-gradient-column reads \
+  --o-clustering gradient-hierarchy-phylum.qza
+
+qiime gneiss dendrogram-heatmap \
+  --i-table collapsed-phylum-table.qza \ 
+  --i-tree hierarchy_phylum.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column zooxanthellae \
+  --p-color-map seismic \
+  --o-visualization tree_heatmap_phylum_by_zoox.qzv
+
+qiime gneiss balance-taxonomy \
+  --i-table collapsed_phylum_table.qza \
+  --i-tree hierarchy_phylum.qza \
+  --i-taxonomy taxanomy.qza \
+  --p-taxa-level 2 \
+  --p-balance-name 'y0' \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column zooxanthellae \
+  --o-visualization y0_taxa_summary.qzv
+
+qiime gneiss dendrogram-heatmap  \
+  --i-table collapsed_phylum_table.qza \ 
+  --i-tree hierarchy_phylum.qza \
+  --m-metadata-file sample_metadata.tsv \
+  --m-metadata-column zooxanthellae \
+  --p-color-map seismic \
+  --o-visualization tree_heatmap_phylum_by_zoox.qzv
+___
+
+#Construct a Phylogeny
+Phylogenetics
+There are a number of diversity metrics like unifrac distance that require the construction of a phylogenetic tree.
+
+
+#Multiple sequence alignment
+#First Mafft is used to align the sequences
+
+time qiime alignment mafft \
+  --i-sequences rep-seqs-dada2.qza \
+  --o-alignment aligned-rep-seqs.qza
+
+#Masking sites
+#Some sites in the alignment are not phylogenetically informative. These sites are masked.
+
+time qiime alignment mask \
+  --i-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza
+
+#Creating a Tree
+
+time qiime phylogeny fasttree \
+  --i-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza
+  --o-visualization unrooted-tree.qzv
+
+#Download the unrooted-tree.qzv file and open it in iTOL <<https://itol.embl.de/>>
+
+#OPTIONAL
+#Midpoint rooting
+Fastree creates an unrooted tree. We can root the tree at it’s midpoint with this command:
+
+time qiime phylogeny midpoint-root \
+  --i-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree.qza
+
+---
+time qiime alignment mafft \
+  --i-sequences taxonomy.qza \
+  --o-alignment aligned-rep-seqs.qza
+
+_____
+
+#Heatmap (version 2018.4)
+
+qiime taxa collapse \
+  --i-table table-dada2.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-level phylum \
+  --o-collapsed-table collapsed_phylum_table.qza
+
+qiime taxa collapse \
+  --i-table table-dada2.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-level family \
+  --o-collapsed-table collapsed_family_table.qza
+
+
+qiime feature-table heatmap \
+  --i-table table.qza  \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column species  \
+  --p-normalize \
+  --p-title Heatmap Species \
+  --o-visualization feature_heatmap.qzv
+
+
+#Classifiers
+#We can use a random forest classifier directly within QIIME via the qiime sample-classifier tool.
+#https://chmi-sops.github.io/mydoc_qiime2.html
+#https://github.com/qiime2/q2-sample-classifier
+
+qiime sample-classifier classify-samples \
+  --i-table table-dada2.qza \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column zooxanthellae \
+  --p-optimize-feature-selection \
+  --p-parameter-tuning \
+  --p-estimator RandomForestClassifier \
+  --p-n-estimators 100 \
+  --output-dir RandomForest
+
+
+#EXPORT
+#con Qiime1
+
+module load anaconda/python2
+module load qiime/1.9.1
+
+qiime tools export  --input-path table-dada2.qza   --output-path mantel
+
+biom convert -i mantel/feature-table.biom -o mantel/otu_table.txt --to-tsv
+
+---
+qiime tools export  --input-path collapsed_family_table.qza   --output-path core-metrics-results
+
+biom convert -i core-metrics-results/feature-table.biom -o core-metrics-results/otu_family_table.txt --to-tsv
+
+---
+qiime tools export  --input-path collapsed_phylum_table.qza   --output-path core-metrics-results
+
+biom convert -i core-metrics-results/feature-table.biom -o core-metrics-results/otu_phylum_table.txt --to-tsv
+
+---
+qiime tools export  --input-path taxonomy.qza   --output-path core-metrics-results
+
+biom convert -i core-metrics-results/feature-table.biom -o core-metrics-results/taxonomy.txt --to-tsv
+
+
+####
+
+#Distance-matrix???
+
+qiime metadata distance-matrix \
+  --m-metadata-file sample_metadata.txt \
+  --m-metadata-column SampleID 
+ 
+#MANTEL TEST
+
+qiime tools export  --input-path "/hpcfs/home/dc.vergara10/dc.vergara10/Muricea/SNPs/bray_curtis_distance_matrix.qza" --output-path "/hpcfs/home/dc.vergara10/dc.vergara10/Muricea/SNPs/"
+
+ qiime tools export  --input-path "/hpcfs/home/dc.vergara10/dc.vergara10/Muricea/SNPs/rooted-tree.qza" --output-path "/hpcfs/home/dc.vergara10/dc.vergara10/Muricea/SNPs/"
+
+qiime tools import \
+    --input-path Phylo_FULL_Muricea_nexus.txt \
+    --output-path Phylo_FULL_Muricea_nexus.qza \
+    --type DistanceMatrix
+
+qiime tools import \
+    --input-path ZzHW61iR3OWxp0bXH9o05Q_nexus.txt \
+    --output-path ZzHW61iR3OWxp0bXH9o05Q_nexus.qza \
+    --type DistanceMatrix
+
+qiime tools import \
+    --input-path bray_curtis_distance_matrix.qza \
+    --output-path bray_curtis_distance_matrix.txt \
+    --type DistanceMatrix
+
+qiime diversity mantel \
+  --i-dm1 Phylo_FULL_Muricea_nexus.txt
+  --i-dm2 ZzHW61iR3OWxp0bXH9o05Q_nexus.txt
+
+#O
+qiime diversity mantel \
+  --i-dm1 rooted-tree.qza
+  --i-dm2 bray_curtis_distance_matrix.qza
+
+#O con Qiime1
+
+module load anaconda/python2
+module load qiime/1.9.1
+
+compare_distance_matrices.py -i Phylo_FULL_Muricea_nexus.txt,ZzHW61iR3OWxp0bXH9o05Q_nexus.txt --method=mantel -n 10000
+
+compare_distance_matrices.py -i rooted-tree.qza,bray_curtis_distance_matrix.qza --method=mantel -n 10000
+
+#EN R
+https://stats.idre.ucla.edu/r/faq/how-can-i-perform-a-mantel-test-in-r/
+
+mantel.rtest(station.dists, ozone.dists, nrepet = 9999)
+
+Monte-Carlo test
+Observation: 0.1636308 
+Call: mantel.rtest(m1 = station.dists, m2 = ozone.dists, nrepet = 9999)
+Based on 9999 replicates
+Simulated p-value: 0.0312
+
+
+#Phylogenetic-tree construction
+#PARA QIIME 2, 2018-11
+https://forum.qiime2.org/t/q2-phylogeny-community-tutorial/4455
+
+
+#RAxML
+qiime phylogeny raxml-rapid-bootstrap --p-seed 1723 --p-rapid-bootstrap-seed 9384 --p-bootstrap-replicates 100 --p-substitution-model GTRCAT --i-alignment masked-aligned-rep-seqs_FINAL.qza --o-tree raxml-cat-bootstrap-tree.qza --verbose
