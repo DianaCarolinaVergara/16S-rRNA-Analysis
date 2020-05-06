@@ -2,12 +2,17 @@
 
 With this pipeline we can develop a full 16S rRNA analysis with [Qiime2](https://qiime2.org/) (2019.7) (I always worked with hipervariable regions V3-V4) for microbial characterization. After that, with some of these results you can perform the phylosimbiotic and cophylogenetic analysis (for Phylosymbiosis and Co-evolution models).
 
+Better explanaitions in our wiki:
+[Wiki](https://github.com/DianaCarolinaVergara/16S-rRNA-Analysis/wiki)
+
+
 
 ![qiime2](https://qiime2.org/assets/img/qiime2.svg)
 
+.
 
-Better explanaitions in our wiki:
-[Wiki](https://github.com/DianaCarolinaVergara/16S-rRNA-Analysis/wiki)
+.
+
 
 ### You will learn to:
 
