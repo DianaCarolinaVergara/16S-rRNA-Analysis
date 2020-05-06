@@ -24,9 +24,6 @@ Better explanaitions in our wiki:
 
 4. Quality [Filter analysis](https://github.com/DianaCarolinaVergara/16S-rRNA-Analysis/wiki/4.-Quality-Filter)  `qiime dada2 denoise-single` with DADA2.
 
-![](https://camo.githubusercontent.com/7fe6c8bb29e8a0e46f3df72b6edd7751981e4e95/68747470733a2f2f62656e6a6a6e65622e6769746875622e696f2f64616461322f696d616765732f44414441325f4c6f676f5f546578745f315f31345f36343070782e706e67)
-
-
 
 5. Features table [construction](https://github.com/DianaCarolinaVergara/16S-rRNA-Analysis/wiki/5.-Feature-Table-Construction) 
    > OTUs table
@@ -83,7 +80,8 @@ Better explanaitions in our wiki:
   
   ![](https://camo.githubusercontent.com/e52928fe0a62e4db03fe3c82b4bf55c95e5fcd2a/687474703a2f2f7169696d652e6f72672f686f6d655f7374617469632f696d616765732f7169696d655f6c6f676f5f6c617267652e706e67)
   ![](https://camo.githubusercontent.com/59590379634ff33ddac6945f6365f424b208fd2b/687474703a2f2f62696f6d2d666f726d61742e6f72672f5f696d616765732f62696f6d2d666f726d61742e706e67)
-
+.
+.
 
 First, you need to check that you have:
 - [X] Installed qiime2 and qiime1 at your HPC cluster
@@ -115,7 +113,7 @@ First, you need to check that you have:
 .
 
 .
-#### The End...?
+## The End...?
 
 Phylosymbiosis and Coevolution Analyses
 
